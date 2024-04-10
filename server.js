@@ -16,9 +16,7 @@ db.once('open', () => {
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    res.send('Server Online!')
-})
+app.get("/", (req, res) => res.send("Express on Vercel"));
 
 app.post('/Login', (req, res) => {
     // console.log(req.body)
