@@ -30,4 +30,17 @@
     "xml2json": "^0.12.0"
   },
   "type": "module"
+},
+    "builds": [
+        {
+            "src": "./server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
 }
