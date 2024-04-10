@@ -29,11 +29,9 @@
     "xml-js": "^1.6.11",
     "xml2json": "^0.12.0"
   },
-  "type": "module"
-},
-    "builds": [
+  "type": "module""builds": [
         {
-            "src": "./server.js",
+            "src": "./app.js",
             "use": "@vercel/node"
         }
     ],
