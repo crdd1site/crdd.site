@@ -487,10 +487,9 @@ app.get("/GRT/Utilizaveis", async (req, res) => {
     return res.status(200).send(doc)
 })
 
-app.listen(porta, async () => {
-    console.log(`Servidor de login online na porta: ${porta}`)
-    console.log('Para conferir vá até http://localhost:3001 para conferir!')
-})
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
 
 function pegaArquivo(body) {
     var dadoXML = body.indexOf('xml')
