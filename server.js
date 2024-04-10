@@ -8,9 +8,6 @@ import axios from "axios"
 
 const app = express();
 
-const porta = 3001
-
-
 db.on('error', console.log.bind(console, 'erro de conexão'))
 db.once('open', () => {
     console.log('Conexão com o banco realizada com sucesso!')
@@ -487,9 +484,6 @@ app.get("/GRT/Utilizaveis", async (req, res) => {
     return res.status(200).send(doc)
 })
 
-app.listen(3000, () => console.log("Server ready on port 3000."));
-
-module.exports = app;
 
 function pegaArquivo(body) {
     var dadoXML = body.indexOf('xml')
@@ -501,3 +495,8 @@ function pegaArquivo(body) {
         return (body)
     }
 }
+
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
+
